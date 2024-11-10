@@ -1,0 +1,397 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,10pt]{letter}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+\usepackage{mathptmx}
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centred version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Samuel Webb} \\[7.5pt]
+%\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+\href{mailto:samuelwebb2@proton.me}{\raisebox{-0.05\height}\faEnvelope \ samuelwebb2@proton.me} \ $|$ \ 
+\href{tel:+447584208274}{\raisebox{-0.05\height}\faMobile \ +44 7584 208274}  \ $|$ \ 
+%\href{https://github.com/samuelwebb2}{\raisebox{-0.05\height}\faGithub\ samuelwebb2} \ $|$ \ 
+\href{https://www.linkedin.com/in/samuel-david-webb/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$\
+He/Him
+\end{tabularx}
+% ---------------------------------------------------------------------------------------
+% PROFILE
+% ---------------------------------------------------------------------------------------
+% \section{Profile}
+% An MMath Mathematics student at the University of Edinburgh, with experience using maths and programming to solve problems. Seeking a career in technology after graduation.
+
+% A maths student with interests in both pure maths and technology. Through studies in maths, has developed strong analytical and problem-solving skills and the ability to work logically with priorities.   Also has an interest in technology and a good working knowledge of computers and various software applications. Enjoys working in a team setting, is a natural communicator, articulate and outgoing with strong interpersonal skills. Seeking a career in technology after graduation.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+% 2020 - present & Masters of Mathematis, \textbf{University of Edinburgh} \hfill \normalsize (Year: 3/5) \\
+% \\
+% 2013 - 2020 & \textbf{Alleyn's School}, London, SE22 8SU \\ 
+
+
+% \quad \textbf{A levels} & Mathematics, Physics and Further Mathematics \hfill A*, A, B \\
+% \quad \textbf{GCSEs} \\
+% & Maths, Physics, Chemistry, Biology, Geography \hfill Grade 9 \\
+% & French \hfill Grade 7 \\
+% & Computer Science, Design and Technology, English Literature, English Language \hfill Grade A \\
+% & FSMQ OCR Additional Maths \hfill Grade A \\
+
+% \textbf{Edinburgh University}, MMath Mathematics & \hfill Sep 2020 - Jun 2025 \\
+% Second year: 1:1 - 72\%, First year: 1:1 - 70\% \\
+% \textbf{Alleyn's School}, London & \hfill Sep 2013 - Jun 2020 \\
+\end{tabularx}
+% A Levels: A*, A, B in Mathematics, Physics, Further Mathematics \\
+% GCSEs: 5x \textbf{9}, 4x \textbf{7}, 2x \textbf{A} including Mathematics, Additional Mathematics FSMQ, English Language 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{University of Edinburgh},  MMath Mathematics & \hfill Sep 2020 - Jun 2025 \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Second year: 1:1 - 72\%. Relevant topics: Numerical Methods, Algebra, Analysis, Statistics, and Probability.
+            \item[--] First year: 1:1 - 70\%. Relevant topics: Linear Algebra, Data Science, Logic, Proof, and Calculus.
+            \item[--] Third year: 2:1 - 63\%. Relevant topics: Real and Complex Analysis, Algebra, Differential Equations, and Metric Spaces
+        \end{itemize}
+    \end{minipage}
+    } \\
+    \textbf{Alleyn's School},  London & \hfill Sep 2013 - Jun 2020 \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] A Levels: \textbf{A*}, \textbf{A}, \textbf{B} in Mathematics, Physics, Further Mathematics.
+            \item[--] GCSEs: 5x \textbf{9}, 4x \textbf{7}, 2x \textbf{A} including Mathematics, Additional Mathematics FSMQ, English Language.
+        \end{itemize}
+    \end{minipage}
+    } \\
+\end{tabularx}
+% \qquad Grade 9 & Maths, Physics, Chemistry, Biology, Geography \\
+% \qquad Grade 7/A & Computer Science, French, Design and Technology, English Literature, English Language \\
+% \qquad Grade A & FSMQ OCR Additional Maths \\
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{QuantSIG \& EUTIC Quant Team}, University of Edinburgh & \hfill May 2023 - Present \\
+    \multicolumn{2}{@{}X@{}}{
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                \item[--] Edinburgh's student-run finance society with \textbf{£75,000} assets under management and \textbf{400 active members}. 
+                \item[--] Developed a stock prediction tool, leveraging scikit-learn and advanced machine learning methodologies.
+            \end{itemize}
+        \end{minipage}
+        } \\ 
+    \textbf{Maths Society Committee member}, University of Edinburgh & \hfill May 2023 - Present \\
+    \multicolumn{2}{@{}X@{}}{
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                % \item[--] Organised and ran events for the Maths Society with \textbf{100+ people}, including Maths Society Ball with a budget of \textbf{£12,000}, Christmas Dinner and other smaller events. 
+                \item[--] Managed a budget of \textbf{£12,000} to organise the Maths Society Ball, for \textbf{150+ people}, as part of a small team.
+            \end{itemize}
+        \end{minipage}
+        } \\ 
+        \textbf{Soup Society Secretary}, University of Edinburgh & \hfill May 2023 - Present \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Organise communications with the committee and other society members. 
+        \end{itemize}
+        \end{minipage}}  \\
+    \textbf{COVID-19 Volunteer}, Vaccination Centre, London & \hfill Apr 2021 - Sep 2021 \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Checked in \textbf{60+ patients hourly}, monitored for any adverse reactions and ensured patients' safety.
+        \end{itemize}
+        \end{minipage}}  \\
+    \textbf{Arup Group Limited},  London & \hfill Aug 2018 \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Shadowed engineers, and observed applied maths required for electrical, mechanical and civil engineering. Gained an understanding of task decomposition and attention to detail in engineering.
+        \end{itemize}
+    \end{minipage}
+    } \\
+    \textbf{Canopius Lloyds of London}, London & \hfill Jun 2018 \\
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Shadowed actuarial, risk pricing, and catastrophe modelling teams as well as underwriters and a broker. Gained insight into the process of computer-assisted calculation in catastrophe modelling.
+        \end{itemize}
+    \end{minipage}
+    }
+    \end{tabularx}
+
+\section{Employment}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Bartender \& Waiter}, \href{https://www.offtowork.co.uk}{ \ Off to Work}, London, Edinburgh & \hfill Jun 2023 - Present \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Worked in a variety of venues, including The Science Museum, Guards Polo Club, the Oval Cricket Ground, and private venues, with dynamic teams of \textbf{3-40 people}. Serving up to \textbf{800+ people per event}.
+        \item[--] Required to be adaptable, and to quickly learn new skills and procedures often in an unfamiliar environment.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\textbf{ID Compliance Auditor}, \href{https://servelegal.co.uk}{ \ Serve Legal}, London, Edinburgh & \hfill Mar 2021 - Apr 2023 \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Keep up to date with the current guidelines on correct age verification and allergen procedures.
+        \item[--] On a part time basis visit \textbf{10+ sites per day}, and accurately record details for reports.
+    \end{itemize}
+    \end{minipage}
+} \\
+\textbf{Bartender, Waiter, \& Cook}, Good Neighbour, London, The Vurger Co, London & \hfill Mar 2018 - Sep 2021 \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Worked as a team of 3 to serve \textbf{80+ customers daily}, simultaneously welcoming and seating customers, taking orders, preparing and serving food and making drinks.
+    \end{itemize}
+    \end{minipage}
+}  \\
+\textbf{COVID-19 Testing registrar / Results recorder}, University of Edinburgh & \hfill Dec 2020 - Jan 2021 \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Registered \textbf{50+ people per hour}, directed them through  COVID-19 testing and registration process. 
+        \item[--] Tested \textbf{25+ people per hour} and recorded results.
+    \end{itemize}
+    \end{minipage}
+}  
+
+\end{tabularx}
+
+% %Projects
+% \section{Projects}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%     \textbf{Homelab and self hosted website}, \href{https://some-link.com}{Link to Demo} & \hfill  \\
+%     \textbf{Handmade bicycle and motorcycle rebuild}, \href{https://some-link.com}{Link to Demo} & \hfill  \\
+%     Designed and built a steel bicycle, and rebuilt a classic motorcycle. \\
+%     % \multicolumn{2}{@{}X@{}}{Designed a frame using CAD,  attended a frame-building workshop to make a steel bike frame. Completed full build of bike at home, for personal use. Now rebuilding classic motorcycle including engine rebuild.}  \\
+%     \end{tabularx}
+
+% \section{Volunteering}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%     \textbf{Maths Society Events Coordinator}, University of Edinburgh & \hfill May 2023 - Present \\
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%             \item[--] Organised and ran events for the Maths Society with \textbf{100+ people}, including a charity fundraiser.
+%         \end{itemize}
+%         \end{minipage}}  \\
+%     \textbf{Soup Society Secretary}, University of Edinburgh & \hfill May 2023 - Present \\
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%             \item[--] Organise communications with the committee and other society members.
+%         \end{itemize}
+%         \end{minipage}}  \\
+%     \textbf{COVID-19 Volunteer}, Vaccination Centre, London & \hfill Apr 2021 - Sep 2021 \\
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%             \item[--] Checked in \textbf{60+ patients hourly}, monitored for any adverse reactions and ensured patients' safety.
+%         \end{itemize}
+%         \end{minipage}}  \\
+%     \textbf{Volunteer Hockey Coach}, Tulse Hill \& Dulwich Hockey Club, London & \hfill Mar 2018 - Mar 2020 \\
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%             \item[--] Coached hockey to 14-15 year olds. Held specific goalkeeper training sessions.
+%         \end{itemize}
+%         \end{minipage}}  \\
+
+% \end{tabularx}    
+% %Skills
+% \section{Skills}
+% \begin{itemize}
+%     \item[--] An ability to think logically with an attention to detail (Skilled in task decomposition. For example, in programming, building functions in order solve larger problems).
+%     \item[--] Proficient in Latex, examples include Beamer presentations, posters and standard documents.   
+%     \item[--] Intermediate level skills in Python and has used various libraries including numpy, matplotlib, pandas and scipy extensively in their coursework at university. Has also briefly used socket, ryu and mininet for UDP client-server file transfer and software-defined networking in their course assignments.
+%     \item[--] A talent for building and servicing computers, including building own PC and low-power home server. 
+%     \item[--] Basic CAD and engineering skills used when designing and building hand-made bicycle and hobby projects that require 3D printing. 
+%     \item[--] Efficient and adept in learning and applying new skills. (Participating in the Duke of Edinburgh awards scheme taught team building and navigational skills.)
+%     \item[--] An ability to explain technology to others in terms that they will understand. (Being the go-to person for the wider family for all IT matters.)
+%     \item[--] Excellent communication and interpersonal skills, and experience in customer-facing roles. (While working as a bartender at Good Neighbour multitasked by engaging with the clients while continuing to run the bar and mix the cocktails)
+%     \item[--] Working part-time, for two years, while studying for A levels required organisation and time management skills.
+%     \item[--] A team player good at inspiring others to do their best. (While at school volunteered as a coach at a local hockey club. Ran a photography and chemistry club, and enjoyed motivating and teaching peers and younger students.)
+% \end{itemize}
+
+% \section{References}
+
+% \begin{tabularx}{\linewidth}{@{}l@{}}
+%     \textbf{Russel Cocks} Good Neighbour, 58 Peckham Rye, London SE15 4JR,\\ \qquad Telephone: \href{tel:+447861661427}{07861 661427}, Email: \href{mailto:r_cocks@hotmail.com}{r\_cocks@hotmail.com} \\
+%     \textbf{Mr P Cochrane} Alleyn's School, Townley Road, Dulwich, London SE22 8SU,\\ \qquad Telephone: \href{tel:+442085571500}{0208 557 1500}, Email: \href{mailto:cochranep@alleyns.org.uk}{cochranep@alleyns.org.uk} \\
+% \end{tabularx}
+
+
+
+
+% %----------------------------------------------------------------------------------------
+% %	PUBLICATIONS
+% %----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills and Interests}
+
+% \textbf{R-Studio} () \\
+\textbf{Python} (Use numpy, matplotlib, scipy, pandas, socket, scikit-learn, and ryu for; Numerical Calculus and Linear Algebra, Regression Modelling, Image Processing, UDP client-server and software-defined network.) 
+\textbf{R} (Statistical hypothesis tests, regression, analysis of variance, likelihood estimates) 
+\textbf{LaTeX} (This CV, Beamer presentations, posters, and standard documents) 
+\textbf{Soldering} (Custom ergonomic mechanical keyboard using surface mount components) 
+\textbf{Docker} (Home Server)
+\textbf{Excel} (Completed Linkedin Learning course)
+
+% \textbf{Homelab and self hosted website}, \href{https://blog.samuelwebb.co.uk}{Link to Demo} \\
+% \textbf{Handmade bicycle and motorcycle rebuild}, \href{https://blog.samuelwebb.co.uk}{Link to Demo}  \\
+% Designed and built a steel bicycle, and currently rebuilding a classic motorcycle. 
+
+
+% \textbf{Technology} (Homelab server, Raspberry Pi, Arduino, 3D printing, Docker, and Linux)
+\textbf{STEM Ambassador} (Working with schools to promote STEM subjects)
+% \textbf{Hockey} (Edinburgh University)
+\textbf{Cycling} (\href{https://www.justgiving.com/page/noahsammyoddballsfdncycle?utm_medium=fundraising&utm_content=page%2Fnoahsammyoddballsfdncycle&utm_source=sms&utm_campaign=pfp-sms}{Fundraised} for Oddballs Foundation rode Manchester to Edinburgh)
+\textbf{Netball} (MathSoc Intermural Team Captain)
+% \textbf{Distance walking} (Duke of Edinburgh Silver Award),
+% \textbf{Photography} (Ran chemistry/photography club at school)
+\textbf{Handmade bicycle and Motorcycle rebuild} (Designed with CAD. Rebuilding classic motorcycle including engine rebuild)
+% \textbf{Mechanics} (Designed and built a steel bicycle, and currently rebuilding a classic motorcycle)
+\textbf{Pool and snooker} (Pool clubs and pool society)
+\textbf{Poker} (UoE Poker Society)
+% Coding: \textbf{Python} (numpy, matplotlib, scipy, and pandas for mathematical programming including: Solving and classifying ordinary differential equations, numerical root finding and ODE solving methods, approximating Fourier series, numerical linear algebra, numerical integration, Regression modeling, image processing, cubic curve)
+
+
+% Enjoys technology, has a homelab server for experimenting with containerisation and other web services. Enjoys competitive games such as quizzes, card games, and board games.  A skilled cook and cocktail maker. Enjoys socialising with friends, travelling (both within the UK and abroad), and keeping active. A keen cyclist and hockey player.  Since completing Duke of Edinburgh gold expeditions has maintained an interest in hiking, the skills of navigation, and enjoys walking in a group.
+
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
+\end{document}
